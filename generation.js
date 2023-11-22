@@ -1,17 +1,17 @@
 //récupérer les données du serveur
-fetch('https://tyradex.vercel.app/api/v1/')
+fetch('https://tyradex.vercel.app/api/v1/gen')
 .then((response) => response.json())
-.then((element) => showPostDetail(element));
+.then((data) => showPostDetail(data));
 
 
 function showPostDetail(list){
-    list.forEach(element => {
-        showPost(element)
+    list.forEach(article => {
+        showPost(article)
     });
 }
 
 //affiche Un article dans le site
-function showPostDetail(article){
+function showPost(article){
 
     //récupérer la cible
     let cible = document.getElementById("generation");
@@ -19,10 +19,10 @@ function showPostDetail(article){
     //construire le contenue
     let contenue = `
     <article class="Generation">
-        <h2>`+Génération+`</h2>
-        <h3> `+gen.generation+` </h3>
-        <main> `+gen.from+` </main>
-        <footer> article n°`+gen.to+` </footer>
+        <h2>Génération</h2>
+        <h3> `+article.generation+` </h3>
+        <main> `+article.from+` </main>
+        <footer> `+article.to+` </footer>
     </article>
     `;
    //ajouter le contenue dans la cible
