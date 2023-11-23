@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+body {
+    font-family: 'Poppins';
+
+}
+
+header {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(pokeball.jpeg);
+    background-size: cover;
+}
+
+.navbar {
+    position: absolute;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.navbar a {
+    color: aliceblue;
+
+}
+
+.logo {
+    color: aliceblue;
+    font-size: 2em;
+    font-weight: bold;
+
+}
+
+.navbar .nav-links ul{
+    display: flex;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 30px;
+
+}
+
+.navbar .nav-links ul li.active a {
+    color: gold;
+    font-weight: 600;
+
+}
