@@ -1,31 +1,41 @@
-//récupérer les données du serveur
+// récupérer les données du serveur pour les générations
 fetch('https://tyradex.vercel.app/api/v1/gen')
-.then((response) => response.json())
-.then((data) => showPostDetail(data));
+    .then((response) => response.json())
+    .then((data) => showGenerations(data));
 
+function showGenerations(list) {
+    let generationSection = document.getElementById("generation");
 
-function showPostDetail(list){
-    list.forEach(article => {
-        showPost(article)
+    list.forEach(generation => {
+        let button = document.createElement("button");
+        button.textContent = "Génération " + generation.generation;
+        button.addEventListener("click", () => showPokemonList(generation.generation));
+        generationSection.appendChild(button);
     });
 }
 
-//affiche Un article dans le site
-function showPost(article){
+function showPokemonList(generation) {
+    fetch(`https://tyradex.vercel.app/api/v1/gen/${generation}`)
+        .then((response) => response.json())
+        .then((data) => displayPokemonList(data));
+}
 
-    //récupérer la cible
-    let cible = document.getElementById("generation");
-   
-    //construire le contenue
-    let contenue = `
-    <article class="Generation">
-        <h2>Génération</h2>
-        <h3> `+article.generation+` </h3>
-        <main> `+article.from+` </main>
-        <footer> `+article.to+` </footer>
-    </article>
-    `;
-   //ajouter le contenue dans la cible
-       cible.innerHTML=cible.innerHTML+contenue;
-       
-   }
+function displayPokemonList(pokemonList) {
+    let listeGenSection = document.getElementById("listeGen");
+    listeGenSection.innerHTML = ""; // Efface le contenu précédent
+
+    pokemonList.forEach(pokemon => {
+        let content = `
+            <article class="Pokemon" onclick="showPokemonDetails(${pokemon.id})">
+                <h2>${pokemon.name.fr}</h2>
+                <img src="${pokemon.sprites.regular}" alt="${pokemon.name.fr}"/>
+                <p>${pokemon.types.map(type => {
+                    // Affiche le nom du type et l'image associée
+                    return `<img src="${type.image}" alt="${type.name}"/>`;
+                }).join(' ')}</p>
+                <!-- Ajoutez d'autres détails du Pokémon selon vos besoins -->
+            </article>
+        `;
+        listeGenSection.innerHTML += content;
+    });
+}
