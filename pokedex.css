@@ -6,11 +6,11 @@
 }
 
 body {
-  font-family: "Poppins";
+  font-family: "Pokemon Hollow";
 }
 
 header {
-  height: 18vh;
+  height: 28vh;
   width: 100vw;
   background-image: url(pokeball.jpeg);
   background-size: cover;
@@ -25,18 +25,12 @@ header {
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  font-size: 110%;
+  font-size: 130%;
   
 }
 
 .navbar a {
   color: aliceblue;
-}
-
-.logo {
-  color: aliceblue;
-  font-size: 2em;
-  font-weight: bold;
 }
 
 .navbar .nav-links ul {
@@ -51,7 +45,4 @@ a:hover {
   color: rgb(250, 180, 18);
   font-weight: 110%;
 }
-
-active {font-size: 110%;}
-
 /*# sourceMappingURL=pokedex.css.map */

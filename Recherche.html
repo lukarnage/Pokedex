@@ -1,96 +1,49 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moteur de Recherche</title>
-  <style>
-    body {
-      font-family: "Poppins" ;
-    }
-
-      #searchForm {
-      margin: 20px;
-    }
-    .searchInput {
-      padding: 8px;
-      margin-right: 10px;
-    }
-    .searchButton {
-      padding: 8px 12px;
-      cursor: pointer;
-    }
-    #results {
-      margin: 40px;
-    }
-  </style>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='pokedex.css'>
+    <script src='generation.js'></script>
 </head>
 <body>
-
-<div id="searchForm">
-  <input type="text" id="searchInput" class="searchInput" placeholder="Entrez votre recherche">
-  <select id="filterSelect" class="searchInput">
-    <option value="name">Nom du Pokémon</option>
-    <option value="number">Numéro du Pokémon</option>
-    <!-- Ajoutez d'autres options selon vos besoins -->
-  </select>
-  <button onclick="search()">GO</button>
-</div>
-
-<div id="results">
-  <!-- Les résultats seront affichés ici -->
-</div>
-
-<script>
-  function search() {
-    // Récupérer la valeur du champ de recherche
-    var searchTerm = document.getElementById("searchInput").value;
-
-    // Récupérer la valeur du filtre sélectionné
-    var filter = document.getElementById("filterSelect").value;
-
-    // Simuler une recherche (remplacez cela par votre logique de recherche réelle)
-    var results = performSearch(searchTerm, filter);
-
-    // Afficher les résultats
-    displayResults(results);
-  }
-
-  function performSearch(term, filter) {
-    // Remplacez cette fonction par votre propre logique de recherche
-    // Pour l'instant, nous retournons des résultats fictifs
-    var fakeData = [
-      { name: "", number: "" },
-      { name: "", number: "" },
-      // Ajoutez d'autres données fictives selon vos besoins
-    ];
-
-    return fakeData.filter(function(item) {
-      // Filtrer les résultats en fonction du filtre sélectionné
-      return item[filter].toLowerCase().includes(term.toLowerCase());
-    });
-  }
-
-  function displayResults(results) {
-    var resultsContainer = document.getElementById("results");
-
-    // Effacer les résultats précédents
-    resultsContainer.innerHTML = "";
-
-    // Afficher les nouveaux résultats
-    if (results.length === 0) {
-      resultsContainer.innerHTML = "<p>Aucun Pokémon trouvé.</p>";
-    } else {
-      var ul = document.createElement("ul");
-      results.forEach(function(result) {
-        var li = document.createElement("li");
-        li.textContent = result.name + " - " + result.number;
-        ul.appendChild(li);
-      });
-      resultsContainer.appendChild(ul);
-    }
-  }
-</script>
-
-</body>
+    <nav class="navbar">
+        <a href="#" class="logo"><img src="Pokédex_logo.png" alt=""></a>
+        <div class="nav-links">
+            <ul>
+               <li class="active"><a href="AccueilPokedex.html">ACCUEIL</a></li>
+               <li><a href="Génération.html">GÉNÉRATIONS</a></li>
+               <li><a href="Type.html">TYPES</a></li>
+               <li><a href="recherche.html">RECHERCHE</a></li>
+               </li> 
+            </ul>
+        </div>
+    </nav>
+    <header></header>
+  </body>
 </html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div id="searchForm">
+    <input type="text" id="searchInput" class="searchInput" placeholder="Recherche ton Pokemon">
+    <select id="filterSelect" class="searchInput">
+      <option value="name">Nom du Pokémon</option>
+      <option value="number">Numéro du Pokémon</option>
+      <!-- Ajoutez d'autres options selon vos besoins -->
+    </select>
+    <button onclick="search()">GO</button>
+  </div>
+  
+  <div id="results"></div>
+
+
+
+
+
+
