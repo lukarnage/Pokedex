@@ -1,24 +1,23 @@
-*{
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
-
-}
-
-body {
-    font-family: 'Poppins';
-
-}
-
-header {
-    height: 100vh;
+  }
+  
+  body {
+    font-family: "Poppins";
+  }
+  
+  header {
+    height: 28vh;
     width: 100vw;
     background-image: url(pokeball.jpeg);
     background-size: cover;
-}
-
-.navbar {
+    
+  }
+  
+  .navbar {
     position: absolute;
     padding: 50px;
     display: flex;
@@ -26,27 +25,25 @@ header {
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-
-}
-
-.navbar a {
+    font-size: 130%;
+    
+  }
+  
+  .navbar a {
     color: aliceblue;
-
-}
-
-.logo {
-    color: aliceblue;
-    font-size: 2em;
-    font-weight: bold;
-
-}
-
-.navbar .nav-links ul{
+  }
+  
+  .navbar .nav-links ul {
     display: flex;
-}
-
-.navbar .nav-links ul li {
+  }
+  
+  .navbar .nav-links ul li {
     margin: 0 30px;
-
-}
+  }
+  
+  a:hover {
+    color: rgb(250, 180, 18);
+    font-weight: 110%;
+  }
+  /*# sourceMappingURL=pokedex.css.map */
 
