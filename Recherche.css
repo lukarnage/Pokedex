@@ -7,7 +7,7 @@
   body{
     height: 100vh;
     width: 100%;
-    background: #ffffff;
+    background-image: url(pokeball.jpeg);;
     display: flex;
     align-items: center;
     justify-content: center;
