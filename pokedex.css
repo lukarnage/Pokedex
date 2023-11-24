@@ -10,10 +10,11 @@ body {
 }
 
 header {
-  height: 100vh;
+  height: 18vh;
   width: 100vw;
   background-image: url(pokeball.jpeg);
   background-size: cover;
+  
 }
 
 .navbar {
@@ -24,6 +25,8 @@ header {
   align-items: center;
   width: 100%;
   box-sizing: border-box;
+  font-size: 110%;
+  
 }
 
 .navbar a {
@@ -44,7 +47,11 @@ header {
   margin: 0 30px;
 }
 
-.navbar .nav-links ul li.active a {
-  color: gold;
-  font-weight: 600;
-}/*# sourceMappingURL=pokedex.css.map */
+a:hover {
+  color: rgb(250, 180, 18);
+  font-weight: 110%;
+}
+
+active {font-size: 110%;}
+
+/*# sourceMappingURL=pokedex.css.map */
