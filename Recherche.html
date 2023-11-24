@@ -1,49 +1,33 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moteur de Recherche</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Pokedex Recherche</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='pokedex.css'>
-    <script src='generation.js'></script>
+    <script src='recherche.js'></script>
 </head>
 <body>
     <nav class="navbar">
         <a href="#" class="logo"><img src="Pokédex_logo.png" alt=""></a>
         <div class="nav-links">
             <ul>
-               <li class="active"><a href="AccueilPokedex.html">ACCUEIL</a></li>
+               <li><a href="AccueilPokedex.html">ACCUEIL</a></li>
                <li><a href="Génération.html">GÉNÉRATIONS</a></li>
                <li><a href="Type.html">TYPES</a></li>
-               <li><a href="recherche.html">RECHERCHE</a></li>
-               </li> 
+               <li class="active"><a href="Recherche.html">RECHERCHE</a></li>
             </ul>
         </div>
     </nav>
+
     <header></header>
-  </body>
+        <h1>Recherche de Pokémon</h1>
+        <input type="text" id="searchInput" placeholder="Entrez le nom du Pokémon">
+        <button onclick="searchPokemon()">Rechercher</button>
+    
+
+    <section id="searchResults"></section>
+    
+</body>
 </html>
-
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <div id="searchForm">
-    <input type="text" id="searchInput" class="searchInput" placeholder="Recherche ton Pokemon">
-    <select id="filterSelect" class="searchInput">
-      <option value="name">Nom du Pokémon</option>
-      <option value="number">Numéro du Pokémon</option>
-      <!-- Ajoutez d'autres options selon vos besoins -->
-    </select>
-    <button onclick="search()">GO</button>
-  </div>
-  
-  <div id="results"></div>
-
-
-
-
-
-
