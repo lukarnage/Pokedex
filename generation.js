@@ -8,7 +8,7 @@ function showGenerations(list) {
 
     list.forEach(generation => {
         let button = document.createElement("button");
-        button.textContent = "Génération" + generation.generation;
+        button.textContent = "GÉNÉRATIONS" + generation.generation;
         button.addEventListener("click", () => showPokemonList(generation.generation));
         generationSection.appendChild(button);
     });
