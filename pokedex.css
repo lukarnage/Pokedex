@@ -30,7 +30,7 @@ header {
 }
 
 .navbar a {
-  color: aliceblue;
+  color: rgb(246, 235, 27);
 }
 
 .navbar .nav-links ul {
@@ -42,7 +42,10 @@ header {
 }
 
 a:hover {
-  color: rgb(250, 180, 18);
-  font-weight: 110%;
+  color: rgb(3, 69, 237);
+  font-weight: 120%;
+
+a:active {
+  font-weight: 100;
 }
 /*# sourceMappingURL=pokedex.css.map */
